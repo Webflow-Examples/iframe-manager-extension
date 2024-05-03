@@ -1,0 +1,325 @@
+/**
+ * Most styles copied from Webflow design guidelines guide
+ * https://developers.webflow.com/data/docs/design-guidelines
+ **/
+:root {
+  --font-body: "Inter";
+  --font-mono: "Fira Mono", monospace;
+  --color-bg-0: rgb(202, 216, 228);
+  --color-bg-1: hsl(209, 36%, 86%);
+  --color-bg-2: hsl(224, 44%, 95%);
+  --color-theme-1: #ff3e00;
+  --color-theme-2: #4075a6;
+  --color-text: rgba(0, 0, 0, 0.7);
+  --column-width: 42rem;
+  --column-margin-top: 4rem;
+  font-family: var(--font-body);
+  color: var(--color-text);
+
+  /* Webflow colors */
+  --background1: #1e1e1e;
+  --background2: #2e2e2e;
+  --background3: #383838;
+  --background4: #373737;
+  --background5: #444444;
+  --backgroundInactive: #2e2e2e;
+  --backgroundInverse: #ebebeb;
+  --backgroundInput: rgba(0, 0, 0, 0.15);
+
+  --actionPrimaryBackground: #006acc;
+  --actionPrimaryBackgroundHover: #187cd9;
+  --actionSecondaryBackground: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  --actionSecondaryBackgroundHover: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.16) 100%
+  );
+  --actionPrimaryText: #ffffff;
+  --actionPrimaryTextHover: #ffffff;
+  --actionSecondaryText: #e0e0e0;
+  --actionSecondaryTextHover: #e0e0e0;
+
+  --border1: rgba(255, 255, 255, 0.13);
+  --border2: rgba(255, 255, 255, 0.14);
+  --border3: rgba(255, 255, 255, 0.19);
+
+  --text1: #f5f5f5;
+  --text2: #bdbdbd;
+  --text3: #a3a3a3;
+  --textInactive: #757575;
+  --textInverse: #1e1e1e;
+
+  --blueText: #8ac2ff;
+  --blueIcon: #8ac2ff;
+  --blueBorder: #007df0;
+
+  --greenBackground: #007a41;
+  --greenBackgroundHover: #0d8a4f;
+  --greenText: #63d489;
+  --greenIcon: #63d489;
+  --greenBorder: #259d4d;
+  --yellowBackground: #946b00;
+
+  --yellowBackgroundHover: #af7f00;
+  --yellowText: #f3c831;
+  --yellowIcon: #f3c831;
+  --yellowBorder: #d7a220;
+
+  --redBackground: #cf313b;
+  --redBackgroundHover: #cb3535;
+  --redText: #ff8a8a;
+  --redIcon: #ff8a8a;
+  --redBorder: #e42f3a;
+
+  --orangeBackground: #bf4704;
+  --orangeBackgroundHover: #DC95616;
+  --orangeText: #eba267;
+  --orangeIcon: #eba267;
+  --orangeBorder: #df640c;
+
+  --purpleBackground: #734ce0;
+  --purpleBackgroundHover: #815beb;
+  --purpleText: #b89eff;
+  --purpleIcon: #b89eff;
+  --purpleBorder: #875ffd;
+
+  /* Box shadows for buttons and inputs */
+  --boxShadows-action-colored: 0px 0.5px 1px 0px rgba(0, 0, 0, 0.8),
+    0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.2) inset;
+  --boxShadows-action-secondary: 0px 0.5px 1px rgba(0, 0, 0, 0.8),
+    inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.12);
+  --boxShadows-input-inner: 0px 1px 1px -1px rgba(0, 0, 0, 0.13) inset,
+    0px 3px 3px -3px rgba(0, 0, 0, 0.17) inset,
+    0px 4px 4px -4px rgba(0, 0, 0, 0.17) inset,
+    0px 8px 8px -8px rgba(0, 0, 0, 0.17) inset,
+    0px 12px 12px -12px rgba(0, 0, 0, 0.13) inset,
+    0px 16px 16px -16px rgba(0, 0, 0, 0.13) inset;
+
+  --boxShadows-menu: 0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.12) inset,
+    0px 12px 24px 8px rgba(0, 0, 0, 0.04), 0px 8px 16px 4px rgba(0, 0, 0, 0.04),
+    0px 4px 8px 2px rgba(0, 0, 0, 0.04), 0px 2px 6px 0px rgba(0, 0, 0, 0.04),
+    0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+
+  --input-inner-shadow: 0px 1px 1px -1px rgba(0, 0, 0, 0.13) inset,
+    0px 3px 3px -3px rgba(0, 0, 0, 0.17) inset,
+    0px 4px 4px -4px rgba(0, 0, 0, 0.17) inset,
+    0px 8px 8px -8px rgba(0, 0, 0, 0.17) inset,
+    0px 12px 12px -12px rgba(0, 0, 0, 0.13) inset,
+    0px 16px 16px -16px rgba(0, 0, 0, 0.13) inset;
+
+  --menu-shadow: 0px 12px 24px 8px rgba(0, 0, 0, 0.08),
+    0px 8px 16px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 6px 0px rgba(0, 0, 0, 0.08),
+    0px -0.5px 0.5px 0px rgba(0, 0, 0, 0.12) inset,
+    0px 0.5px 0.5px 0px rgba(255, 255, 255, 0.12) inset;
+
+  /* TYPOGRAPHY */
+  --font-stack: "Inter", sans-serif;
+  --font-size-small: 11.5px;
+  --font-size-small-letter-spacing: -0.115px;
+  --font-size-large: 12.5px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --border-radius: 4px;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+  color: var(--textInverse);
+}
+
+h1,
+h2,
+p {
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-theme-1);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+pre {
+  font-size: 16px;
+  font-family: var(--font-mono);
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 3px;
+  box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+  padding: 0.5em;
+  overflow-x: auto;
+  color: var(--color-text);
+}
+
+.text-column {
+  display: flex;
+  max-width: 48rem;
+  flex: 0.6;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+input,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (min-width: 720px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* .visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+} */
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 4px;
+  max-width: 800px;
+}
+
+/* .wf-list-frames-btn {
+  background-color: var(--actionPrimaryBackground);
+  border: 2px solid var(--blueBorder);
+  color: var(--actionPrimaryText);
+}
+
+.wf-list-frames-btn:hover {
+  background-color: var(--actionPrimaryBackgroundHover);
+} */
+
+button {
+  max-width: 400px;
+  color: var(--actionPrimaryText);
+}
+
+button:hover {
+  color: var(--actionPrimaryTextHover);
+  cursor: pointer;
+}
+
+.iframe-container {
+  width: 600px;
+}
+
+.tile {
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.iframe-btn-action {
+  align-self: end;
+}
+
+.iframe-btn-group {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: end;
+  column-gap: 8px;
+  margin-top: 1rem;
+}
+
+.tile > .bx--btn--icon-only--bottom.iframe-search-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.bx--btn {
+  padding: calc(0.875rem - 3px) 15px calc(0.875rem - 3px) 15px;
+}
+
+.iframe-attr-form {
+  overflow-y: auto;
+  position: relative;
+  max-height: calc(400px - 1rem);
+  border: 2px solid white;
+  margin-bottom: 2rem;
+}
+
+.iframe-edit-btn {
+  padding-right: 2.55rem;
+}
+
+.modal-attr-grid {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.iframe-attr-form-submit {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.modal-body {
+  overflow: hidden;
+}
+
+.main-option-btn-set {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  column-gap: 8px;
+}
+
+.create-iframe-form {
+  border: none;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.example-instructions {
+  overflow-y: auto;
+  height: 50%;
+}
