@@ -64,7 +64,7 @@
 			// on the <iframe> tag
 			iframeElements = filteredElements.map(async (el) => {
 				const attributesArr = await el.getAllAttributes();
-				const attributesObj = (attributesArr || [])?.reduce((arr, attr) => ({
+				const attributesObj = attributesArr.reduce((arr, attr) => ({
 					...arr,
 					[attr.name]: attr.value,
 				}), {});
