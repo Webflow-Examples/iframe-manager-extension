@@ -79,7 +79,7 @@
             <p>Select a root element in the Designer to insert the iframe</p>
         {:else}
             <Form class="iframe-attr-form create-iframe-form" on:submit={onIframeFormSubmit}>
-                <TextArea labelText="Add iframe code" name="new-iframe-code" placeholder={`<iframe style="border: none" width="800" height="600" src="https://rive.app/s/R3dXkgO8Q0CbqkF3Sfuyng/embed" allowfullscreen allow="autoplay"></iframe>`} />
+                <TextArea labelText="Add iframe code" name="new-iframe-code" placeholder={`Add iframe HTML here or copy an example below...`} />
                 <Button class="iframe-attr-form-submit" type="submit">Submit</Button>
             </Form>
             <div class="divider" />
