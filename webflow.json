@@ -1,0 +1,6 @@
+{
+  "name": "<iframe> Manager",
+  "size": "large",
+  "apiVersion": "2",
+  "publicDir": "dist"
+}
