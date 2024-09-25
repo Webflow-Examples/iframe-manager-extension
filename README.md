@@ -1,6 +1,6 @@
 # iframe Manager
 
-A [Webflow Designer Extension App](https://developers.webflow.com/data/docs/designer-extensions) that allows for managing and inserting `<iframe>` elements on a Webflow page in the Designer. This app uses the v2 Designer APIs below.
+A [Webflow Designer Extension App](https://developers.webflow.com/data/docs/designer-extensions) that allows for managing and creating custom DOM `<iframe>` elements on a Webflow page in the Designer. This is useful for when you need to manage 3rd party embed products on a page. This app uses the v2 Designer APIs below.
 
 [Designer Extension APIs v2](https://developers.webflow.com/designer/reference/introduction)
 
